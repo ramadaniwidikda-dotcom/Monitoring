@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Mengatur body menjadi Flexbox vertikal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Kunci utama agar konten meregang dan mendorong footer ke bawah secara otomatis */
+.main-content {
+    flex: 1;
+}
+
+.header {
+    background-color: #0E0E52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-judul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.judul-web {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.identitas-nama-header {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Menggantikan margin manual yang terlalu besar */
+}
+
+.logo-univ {
+    width: 80px;
+}
+
+/* HEADER END */
+
+.logo-besar {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.univ-logo-besar {
+    width: 400px;
+}
+
+.univ-nama {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.identitas-mahasiswa {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+/* Thumbnail END */
+
+.Opsi-Penyedia {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.Kotak-KRS, .Kotak-Materi, .Kotak-Kegiatan, .Kotak-IPS {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.3);
+    position: relative; /* Memudahkan pengaturan tombol di dalam kotak */
+}
+
+.KRS, .materi, .kegiatan, .IPK {
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #150578;
+    font-size: 20px;
+}
+
+.desk-krs, .desk-materi, .desk-kegiatan, .desk-IPS {
+    display: flex;
+    text-align: justify;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+/* Tombol diatur menggunakan posisi absolute agar selalu rata di bagian bawah kotak */
+.krs-button, .materi-button, .kegiatan-button, .IPS-button {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background-color: #449DD1;
+    color: white;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+
+.krs-button:hover, .materi-button:hover, .kegiatan-button:hover, .IPS-button:hover {
+    background-color: #0E0E52;
+}
+
+.garis-krs, .garis-materi {
+    text-decoration: none;
+}
+
+/* Opsi penyedia END */
+
+.kotak-jam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    max-width: 700px;
+    margin: 40px auto 60px auto; /* Menggunakan auto agar posisinya di tengah secara responsif */
+    background-color: #0E0E52;
+    color: white;
+    border-radius: 30px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.jam-real {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes animasifadeup {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 15px 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    background-color: #0E0E52;
+    margin-top: auto; /* Kunci agar footer selalu menempel di bawah */
+}

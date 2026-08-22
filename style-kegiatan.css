@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Mengatur body menjadi Flexbox vertikal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Kunci utama agar konten merenggang dan mendorong footer ke bawah */
+.main-content {
+    flex: 1;
+}
+
+.header {
+    background-color: #0E0E52;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;       /* Membuat elemen menempel saat di-scroll */
+    top: 0;                 /* Menempel tepat di batas atas layar */
+    z-index: 1000;
+}
+
+.header-judul {
+    display: flex;
+}
+
+.judul-web {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.identitas-nama-header {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Menggantikan margin-left manual yang terlalu lebar agar aman di berbagai ukuran layar */
+}
+
+.logo-univ {
+    width: 80px;
+}
+
+.judul {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.kotak-desk-materi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.calendar-container {
+    width: 700px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e1e2f;
+}
+
+.calendar-header button {
+    background: #f0f0f0;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calendar-header button:hover {
+    background: #e0e0e0;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 8px;
+}
+
+.dates-grid .date {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.dates-grid .date:hover {
+    background: #f0f0f0;
+}
+
+.dates-grid .date.inactive {
+    color: #ccc;
+}
+
+.dates-grid .date.active {
+    background: #38bdf8;
+    color: white;
+    font-weight: bold;
+}
+
+.kalender {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 100px;
+}
+
+.kalender-utama {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.taskbar {
+    border-radius: 30px;
+    width: 1500px;
+    height: 750px;
+    box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.1);
+    animation: animasifadeup 1s ease forwards;
+}
+
+.header-taskbar {
+    padding: 20px;
+}
+
+.judul-taskbar p {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.subjudul-taskbar {
+    font-size: 18px;
+    padding: 5px 20px;
+}
+
+.isi-taskbar {
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px 45px;
+    gap: 30px;
+}
+
+.bagian-goals,
+.bagian-event,
+.bagian-tugas {
+    width: 500px;
+    padding: 20px;
+    height: 560px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.judul-task {
+    font-weight: bold;
+}
+
+.isi-goals {
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.list-dots {
+    padding: 5px 25px;
+}
+
+.list-dots li {
+    padding: 8px;
+    text-align: justify;
+}
+
+@keyframes animasifadeup {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Footer otomatis menempel rapi di bawah selebar layar */
+.footer {
+    width: 100%;
+    padding: 15px 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    background-color: #0E0E52;
+    margin-top: 50px;
+}

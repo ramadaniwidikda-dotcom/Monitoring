@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Mengatur body menjadi Flexbox vertikal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Kunci utama agar konten meregang dan mendorong footer ke bawah */
+.main-content {
+    flex: 1;
+}
+
+.header {
+    background-color: #0E0E52;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;       /* Membuat elemen menempel saat di-scroll */
+    top: 0;                 /* Menempel tepat di batas atas layar */
+    z-index: 1000;
+}
+
+.header-judul {
+    display: flex;
+}
+
+.judul-web {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.identitas-nama-header {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Menggantikan margin manual ribuan piksel agar aman di berbagai ukuran layar */
+}
+
+.logo-univ{
+    width: 80px;
+}
+
+.judul {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.kotak-desk-krs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.kotak-import {
+    width: 300px;
+    height: 50px;
+    background-color: #0E0E52;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: background-color 0.5s ease;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.kotak-import:hover {
+    background-color: #449DD1;
+}
+
+.link-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.KRS-foto {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Menambahkan jarak antar gambar */
+    margin-top: 50px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+/* Mengubah selektor img agar lebih spesifik dan tidak merusak gambar logo di header */
+.KRS-foto img {
+    width: 600px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.drive-krs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.kotak-drive-krs {
+    background-color: #0E0E52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.kotak-drive-krs:hover {
+    background-color: #449DD1;
+}
+
+.drive-krs-text {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column; /* Mengubah susunan teks dan tombol menjadi ke bawah agar rapi */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+@keyframes animasifadeup {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 15px 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    background-color: #0E0E52;
+    margin-top: auto; /* Kunci agar footer selalu menempel di bawah */
+}

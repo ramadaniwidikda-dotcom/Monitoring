@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+.header {
+    background-color: #0E0E52;
+    display: flex;
+    gap: 10px;
+    color: white;
+    padding: 8px;
+    position: sticky;       /* Membuat elemen menempel saat di-scroll */
+    top: 0;                 /* Menempel tepat di batas atas layar */
+    z-index: 1000;
+}
+
+.judul-web {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.identitas-nama-header {
+    display: flex;
+    align-items: center;
+    margin-left: 1250px;
+}
+
+.logo-univ{
+    width: 80px;
+}
+
+.judul {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.kotak-desk-materi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pih-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.materi-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0E0E52;
+}

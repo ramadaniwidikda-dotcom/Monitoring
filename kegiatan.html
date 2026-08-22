@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONITORING KEGIATAN</title>
+    <link rel="stylesheet" href="style-kegiatan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Font end-->
+</head>
+<body>
+    <div class="header">
+        <div class="header-judul">
+        <a href="index.html">
+        <img class="logo-univ" src="Logo Universitas Sultan Ageng Tirtayasa (Untirta) [RiderGalau].png"
+            alt="Logo Universitas Sultan Ageng Tirtayassa">
+        </a>
+        <p class="judul-web"><a href="index.html" style="text-decoration: none; color: white;">MONITORING KEGIATAN</a></p>
+        </div>
+        <p class="identitas-nama-header">1111260194 | RAMADANI WIDIKDA</p>
+    </div>
+
+    <!-- KUNCI UTAMA: Bungkus semua konten di sini -->
+    <div class="main-content">
+         <div class="judul">
+             <h1>MONITORING KEGIATAN</h1>
+         </div>
+         <!-- Kotak Upload -->
+         <div class="kotak-desk-materi">
+             <p class="desk-import-materi">
+                 Halaman ini di peruntukan mencatat jadwal dan juga kegiatan yang difungsikan sebagai reminder atau pengingat.
+             </p>
+         </div>
+         <div class="kalender">
+             <div class="kalender-utama">
+                 <div class="calendar-container">
+                     <!-- Header Kalender & Tombol Navigasi -->
+                     <div class="calendar-header">
+                         <button id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                         <h2 id="monthYear"></h2>
+                         <button id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                     </div>
+
+                     <!-- Nama Hari -->
+                     <div class="days-of-week">
+                         <div>Sun</div>
+                         <div>Mon</div>
+                         <div>Tue</div>
+                         <div>Wed</div>
+                         <div>Thu</div>
+                         <div>Fri</div>
+                         <div>Sat</div>
+                     </div>
+
+                     <!-- Kotak Tanggal (Diisi otomatis oleh JS) -->
+                     <div id="dates" class="dates-grid"></div>
+                 </div>
+                 <!--taskbar-->
+                 <div class="taskbar">
+                     <div class="header-taskbar">
+                         <div class="judul-taskbar">
+                             <p>Tugas & Event</p>
+                         </div>
+                         <div class="subjudul-taskbar">
+                             <p>Kalender harian dan monitoring kegiatan</p>
+                         </div>
+                     </div>
+                     <div class="isi-taskbar">
+                         <!--Goals-->
+                         <div class="bagian-goals">
+                             <div class="goals">
+                                 <p class="judul-task">Goals</p>
+                                 <div class="isi-goals">
+                                     <ul class="list-dots">
+                                         <li>Menjadi lebih baik sekarang dan seterusnya</li>
+                                         <li>Meningkatkan kekuatan dan daya tahan dalam lari</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                         <!--Event-->
+                         <div class="bagian-event">
+                             <div class="goals">
+                                 <p class="judul-task">Event</p>
+                                 <div class="isi-goals">
+                                     <ul class="list-dots">
+                                         <li>Menjadi lebih baik sekarang dan seterusnya</li>
+                                         <li>23 Agustus 2026 Wawancara PEKIM</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                         <!--Tugas-->
+                         <div class="bagian-tugas">
+                             <div class="goals">
+                                 <p class="judul-task">Tugas</p>
+                                 <div class="isi-goals">
+                                     <ul class="list-dots">
+                                         <li>Menyelesaikan Web Monitoring Kegiatan</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>  
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+    <!-- END OF MAIN CONTENT -->
+
+    <!--Footer-->
+    <div class="footer">
+        <p>Made by RAMADANI WIDIKDA for Educational Purpose</p>
+    </div>
+
+<script src="kegiatan.js"></script>
+</body>
+</html>
