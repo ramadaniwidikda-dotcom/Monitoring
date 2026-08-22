@@ -4,73 +4,69 @@
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
 }
-
 html, body {
     height: 100%;
     margin: 0;
 }
-
-/* Mengatur body menjadi Flexbox vertikal */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
-/* Kunci utama agar konten meregang dan mendorong footer ke bawah */
 .main-content {
     flex: 1;
 }
-
 .header {
     background-color: #0E0E52;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
     color: white;
     padding: 10px 20px;
-    position: sticky;       /* Membuat elemen menempel saat di-scroll */
-    top: 0;                 /* Menempel tepat di batas atas layar */
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
-
 .header-judul {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
-
 .judul-web {
     display: flex;
     align-items: center;
     font-weight: bold;
 }
-
 .identitas-nama-header {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Menggantikan margin manual ribuan piksel agar aman di berbagai ukuran layar */
+    margin-left: auto;
 }
-
-.logo-univ{
+.logo-univ {
     width: 80px;
 }
-
 .judul {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin-top: 50px;
+    padding: 0 15px;
     animation: animasifadeup 1s ease forwards;
 }
-
 .kotak-desk-krs {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 15px;
+    padding: 0 20px;
     animation: animasifadeup 1s ease forwards;
 }
-
 .kotak-import {
     width: 300px;
+    max-width: 90%;
     height: 50px;
     background-color: #0E0E52;
     color: white;
@@ -79,14 +75,14 @@ body {
     align-items: center;
     border-radius: 30px;
     font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
     transition: background-color 0.5s ease;
     animation: animasifadeup 1s ease forwards;
 }
-
 .kotak-import:hover {
     background-color: #449DD1;
 }
-
 .link-submit {
     display: flex;
     justify-content: center;
@@ -94,22 +90,23 @@ body {
     margin-top: 25px;
     text-decoration: none;
 }
-
 .KRS-foto {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Menambahkan jarak antar gambar */
+    gap: 30px;
     margin-top: 50px;
+    padding: 0 20px;
     animation: animasifadeup 1s ease forwards;
 }
-
-/* Mengubah selektor img agar lebih spesifik dan tidak merusak gambar logo di header */
 .KRS-foto img {
     width: 600px;
     max-width: 100%;
+    height: auto;
     object-fit: contain;
+    flex: 1 1 300px; /* boleh menyusut sampai minimal ~300px lalu wrap ke bawah */
+    min-width: 0;    /* kunci: izinkan gambar menyusut di bawah ukuran aslinya */
 }
-
 .drive-krs {
     display: flex;
     justify-content: center;
@@ -117,7 +114,6 @@ body {
     text-decoration: none;
     animation: animasifadeup 1s ease forwards;
 }
-
 .kotak-drive-krs {
     background-color: #0E0E52;
     display: flex;
@@ -125,26 +121,26 @@ body {
     align-items: center;
     height: 50px;
     width: 300px;
+    max-width: 90%;
     color: white;
     border-radius: 20px;
     transition: background-color 0.5s ease;
     animation: animasifadeup 1s ease forwards;
 }
-
 .kotak-drive-krs:hover {
     background-color: #449DD1;
 }
-
 .drive-krs-text {
     margin: 40px 0;
     display: flex;
-    flex-direction: column; /* Mengubah susunan teks dan tombol menjadi ke bawah agar rapi */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 0 20px;
     gap: 15px;
     animation: animasifadeup 1s ease forwards;
 }
-
 @keyframes animasifadeup {
     from {
         opacity: 0;
@@ -155,14 +151,8 @@ body {
         transform: translateY(0px);
     }
 }
-
 .footer {
     width: 100%;
     padding: 15px 0px;
     color: white;
     font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    background-color: #0E0E52;
-    margin-top: auto; /* Kunci agar footer selalu menempel di bawah */
-}
