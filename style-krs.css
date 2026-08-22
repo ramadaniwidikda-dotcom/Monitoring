@@ -156,3 +156,63 @@ body {
     padding: 15px 0px;
     color: white;
     font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    background-color: #0E0E52;
+    margin-top: auto;
+}
+
+/* ======================= */
+/* RESPONSIVE - TABLET     */
+/* ======================= */
+@media (max-width: 900px) {
+    .KRS-foto img {
+        width: 45%;
+    }
+}
+
+/* ======================= */
+/* RESPONSIVE - MOBILE     */
+/* ======================= */
+@media (max-width: 768px) {
+    .header {
+        justify-content: flex-start;
+    }
+
+    .identitas-nama-header {
+        font-size: 12px;
+    }
+
+    .judul h1 {
+        font-size: 22px;
+    }
+
+    .desk-import-krs {
+        font-size: 14px;
+    }
+
+    .KRS-foto {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .KRS-foto img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .judul-web {
+        font-size: 12px;
+    }
+
+    .logo-univ {
+        width: 55px;
+    }
+
+    .judul h1 {
+        font-size: 18px;
+    }
+}
