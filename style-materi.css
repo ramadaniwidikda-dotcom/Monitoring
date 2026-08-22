@@ -473,20 +473,20 @@ body {
 }
 
 .Opsi {
-    display: flex;             /* Menyusun ke samping */
-    overflow-x: auto;          /* Membuat scroll horizontal */
-    align-items: flex-start;
-    gap: 24px;                 /* Jarak antar kotak */
-    padding-bottom: 16px;      /* Jarak bawah agar scrollbar tidak menempel */
-    scroll-snap-type: x mandatory; /* Efek magnet saat di-scroll */
+    display: flex;
+    overflow-x: auto;
+    align-items: stretch; /* Supaya tinggi kotak bisa sama rata jika diinginkan */
+    gap: 20px;            /* Jarak antar kotak lebih bersih */
+    padding: 10px 20px 24px 20px; /* Padding kiri-kanan supaya item pertama/terakhir tidak nempel layar HP */
+    scroll-snap-type: x mandatory;
     animation: animasifadeup 1s ease forwards;
 }
 
 .Opsi::-webkit-scrollbar {
-    height: 8px;               /* Tinggi scrollbar */
+    height: 8px;
 }
 .Opsi::-webkit-scrollbar-thumb {
-    background-color: #94a3b8; /* Warna scrollbar abu-abu */
+    background-color: #94a3b8;
     border-radius: 30px;
 }
 
