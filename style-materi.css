@@ -69,6 +69,7 @@ body {
 
 .Opsi-Penyedia {
     display: flex;
+    align-items: flex-start;
     gap: 40px;
     margin-top: 50px;
     animation: animasifadeup 1s ease forwards;
@@ -252,6 +253,7 @@ body {
 
 .Opsi-Penyedia-Dua {
     display: flex;
+    align-items: flex-start;
     gap: 40px;
     margin-top: 50px;
 }
@@ -473,6 +475,7 @@ body {
 .Opsi {
     display: flex;             /* Menyusun ke samping */
     overflow-x: auto;          /* Membuat scroll horizontal */
+    align-items: flex-start;
     gap: 24px;                 /* Jarak antar kotak */
     padding-bottom: 16px;      /* Jarak bawah agar scrollbar tidak menempel */
     scroll-snap-type: x mandatory; /* Efek magnet saat di-scroll */
@@ -544,9 +547,9 @@ body {
     margin-top: auto; /* Ini kunci utamanya untuk mendorong footer ke bawah */
 }
 
-/* ======================= */
-/* RESPONSIVE - HEADER     */
-/* ======================= */
+/* ============================= */
+/* RESPONSIVE - HEADER           */
+/* ============================= */
 .header {
     flex-wrap: wrap;
 }
@@ -555,9 +558,9 @@ body {
     gap: 12px;
 }
 
-/* ======================= */
-/* RESPONSIVE - TABLET     */
-/* ======================= */
+/* ============================= */
+/* RESPONSIVE - TABLET (<=900px) */
+/* ============================= */
 @media (max-width: 900px) {
     .judul h1 {
         font-size: 26px;
@@ -575,25 +578,33 @@ body {
 
     .Opsi {
         padding: 0 20px 16px;
+        align-items: flex-start;
     }
 
     .Kotak-PIH, .Kotak-PHI, .Kotak-Anti-Korupsi, .Kotak-Agama,
     .Kotak-Pancasila, .Kotak-IN, .Kotak-HA, .Kotak-BIND {
-        width: 320px;
-        height: auto;
-        min-height: 380px;
+        width: 320px !important;
+        height: auto !important;
+        min-height: unset !important;
         flex-shrink: 0;
+        padding-bottom: 25px;
     }
 
     .Kotak-UTBK {
-        width: 320px;
+        width: 320px !important;
         flex-shrink: 0;
+    }
+
+    .PIH-button, .PHI-button, .Anti-Korupsi-button, .Agama-button,
+    .Pancasila-button, .IN-button, .HA-button, .BIND-button {
+        margin-top: 20px !important;
+        position: static;
     }
 }
 
-/* ======================= */
-/* RESPONSIVE - MOBILE     */
-/* ======================= */
+/* ============================= */
+/* RESPONSIVE - MOBILE (<=768px) */
+/* ============================= */
 @media (max-width: 768px) {
     .header {
         justify-content: flex-start;
@@ -622,7 +633,7 @@ body {
 
     .Kotak-PIH, .Kotak-PHI, .Kotak-Anti-Korupsi, .Kotak-Agama,
     .Kotak-Pancasila, .Kotak-IN, .Kotak-HA, .Kotak-BIND {
-        width: 280px;
+        width: 280px !important;
         margin-left: 20px;
     }
 
@@ -633,7 +644,8 @@ body {
 
     .PIH-button, .PHI-button, .Anti-Korupsi-button, .Agama-button,
     .Pancasila-button, .IN-button, .HA-button, .BIND-button, .UTBK-button {
-        width: 240px;
+        width: 240px !important;
+        margin-left: 0;
     }
 
     .kumpulan-link {
@@ -646,6 +658,9 @@ body {
     }
 }
 
+/* ============================= */
+/* RESPONSIVE - SMALL PHONES     */
+/* ============================= */
 @media (max-width: 480px) {
     .judul-web {
         font-size: 12px;
