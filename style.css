@@ -10,14 +10,12 @@ html, body {
     margin: 0;
 }
 
-/* Mengatur body menjadi Flexbox vertikal */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Kunci utama agar konten meregang dan mendorong footer ke bawah secara otomatis */
 .main-content {
     flex: 1;
 }
@@ -33,6 +31,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 .header-judul {
@@ -45,60 +44,59 @@ body {
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .identitas-nama-header {
     display: flex;
     align-items: center;
     margin-left: auto;
-    font-size: 13px;
-    text-align: right;
 }
 
 .logo-univ {
-    width: 60px;
+    width: 80px;
 }
 
 /* HEADER END */
 
 .logo-besar {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     animation: animasifadeup 1s ease forwards;
 }
 
 .univ-logo-besar {
-    width: 250px;
-    max-width: 80%;
+    width: 400px;
+    max-width: 90%;
+    height: auto;
 }
 
 .univ-nama {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     text-align: center;
+    margin-top: 10px;
+    padding: 0 15px;
     animation: animasifadeup 1s ease forwards;
 }
 
 .identitas-mahasiswa {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     text-align: center;
-    font-size: 14px;
+    margin-top: 10px;
     padding: 0 15px;
     animation: animasifadeup 1s ease forwards;
 }
 
-/* Opsi Penyedia */
+/* Thumbnail END */
+
 .Opsi-Penyedia {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-wrap: wrap; /* Membuat kotak turun ke bawah jika layar tidak muat */
-    gap: 30px;
-    margin-top: 40px;
+    gap: 40px;
+    margin-top: 50px;
     padding: 0 20px;
     animation: animasifadeup 1s ease forwards;
 }
@@ -124,18 +122,16 @@ body {
     margin-left: 30px;
     margin-top: 20px;
     margin-right: 30px;
-    font-size: 14px;
 }
 
-/* Tombol di dalam kotak */
 .krs-button, .materi-button, .kegiatan-button, .IPS-button {
     position: absolute;
     bottom: 25px;
     left: 25px;
-    right: 25px;
     background-color: #449DD1;
     color: white;
-    width: auto;
+    width: 350px;
+    max-width: calc(100% - 50px);
     height: 50px;
     display: flex;
     justify-content: center;
@@ -154,7 +150,8 @@ body {
     text-decoration: none;
 }
 
-/* Kotak Jam Realtime */
+/* Opsi penyedia END */
+
 .kotak-jam {
     display: flex;
     justify-content: center;
@@ -166,16 +163,17 @@ body {
     background-color: #0E0E52;
     color: white;
     border-radius: 30px;
-    font-size: 14px;
-    padding: 0 15px;
-    text-align: center;
     animation: animasifadeup 1s ease forwards;
+    padding: 0 10px;
+    text-align: center;
 }
 
 .jam-real {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 14px;
 }
 
 @keyframes animasifadeup {
@@ -194,67 +192,114 @@ body {
     padding: 15px 0px;
     color: white;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     background-color: #0E0E52;
     margin-top: auto;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN UNTUK HP / LAYAR KECIL
-   ========================================== */
-@media screen and (max-width: 768px) {
-    /* Mengecilkan teks identitas di header agar tidak kepotong */
-    .identitas-nama-header {
-        font-size: 11px;
+/* ======================= */
+/* RESPONSIVE - TABLET     */
+/* ======================= */
+@media (max-width: 900px) {
+    .Kotak-KRS, .Kotak-Materi, .Kotak-Kegiatan, .Kotak-IPS {
+        width: 45%;
+        min-width: 300px;
+    }
+}
+
+/* ======================= */
+/* RESPONSIVE - MOBILE     */
+/* ======================= */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 15px;
     }
 
-    .judul-web {
+    .identitas-nama-header {
+        margin-left: 0;
         font-size: 12px;
     }
 
     .logo-univ {
-        width: 45px;
+        width: 60px;
     }
 
-    /* Menyesuaikan ukuran logo besar di tengah */
+    .judul-web {
+        font-size: 14px;
+    }
+
+    .univ-logo-besar {
+        width: 250px;
+    }
+
+    .univ-nama {
+        font-size: 16px;
+    }
+
+    .identitas-mahasiswa {
+        font-size: 12px;
+    }
+
+    .Opsi-Penyedia {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .Kotak-KRS, .Kotak-Materi, .Kotak-Kegiatan, .Kotak-IPS {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 300px;
+        padding-bottom: 80px; /* ruang untuk tombol absolute di bawah */
+    }
+
+    .krs-button, .materi-button, .kegiatan-button, .IPS-button {
+        width: calc(100% - 50px);
+        font-size: 9px;
+    }
+
+    .kotak-jam {
+        height: auto;
+        padding: 10px;
+    }
+
+    .jam-real {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .judul-web {
+        font-size: 12px;
+    }
+
+    .identitas-nama-header {
+        font-size: 10px;
+    }
+
     .univ-logo-besar {
         width: 180px;
     }
 
-    /* Mengecilkan ukuran font identitas mahasiswa bawah logo */
-    .univ-nama {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .identitas-mahasiswa {
-        font-size: 11px;
-        text-align: center;
-    }
-
-    /* Membuat kotak menu menyesuaikan lebar layar HP */
     .Kotak-KRS, .Kotak-Materi, .Kotak-Kegiatan, .Kotak-IPS {
-        width: 100%;
-        height: 360px;
+        min-width: unset;
     }
 
-    .Opsi-Penyedia {
-        padding: 0 15px;
-        gap: 20px;
+    .KRS, .materi, .kegiatan, .IPK {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 18px;
     }
 
-    /* Menyesuaikan lebar tombol agar pas di dalam kotak versi HP */
-    .krs-button, .materi-button, .kegiatan-button, .IPS-button {
-        left: 20px;
-        right: 20px;
-        width: auto;
-    }
-
-    /* Menyesuaikan ukuran kotak jam */
-    .kotak-jam {
-        font-size: 12px;
-        height: auto;
-        padding: 10px;
+    .desk-krs, .desk-materi, .desk-kegiatan, .desk-IPS {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 14px;
     }
 }
