@@ -187,6 +187,38 @@ body {
     }
 }
 
+.link-shortcut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    margin-bottom: 250px;
+    animation: animasifadeup 1s ease forwards;
+}
+
+.icon {
+    width: 30px;
+}
+
+.youtube {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    color: #0E0E52;
+    transition: background-color 1s ease;
+}
+
+.youtube:hover {
+    background-color: #0E0E52;
+    color: white;
+}
+
 .footer {
     width: 100%;
     padding: 15px 0px;
@@ -301,5 +333,12 @@ body {
         margin-left: 20px;
         margin-right: 20px;
         font-size: 14px;
+    }
+
+    .link-shortcut {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-top: 30px;
     }
 }
