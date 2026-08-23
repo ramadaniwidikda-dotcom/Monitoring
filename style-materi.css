@@ -76,6 +76,7 @@ body {
 /* ============================= */
 
 .Opsi {
+    margin-top: 40px;
     display: flex;
     flex-wrap: nowrap;     /* <-- TAMBAHKAN BARIS INI (Kunci agar kotaknya berjajar kesamping dan tidak turun ke bawah) */
     overflow-x: auto;
