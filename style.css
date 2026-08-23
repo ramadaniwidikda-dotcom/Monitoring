@@ -189,11 +189,11 @@ body {
 
 .link-shortcut {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 50px;
     padding: 20px;
-    margin-bottom: 250px;
+    margin-bottom: 30px; /* sebelumnya 250px, ini penyebab jarak kosong besar di bawah */
     animation: animasifadeup 1s ease forwards;
 }
 
